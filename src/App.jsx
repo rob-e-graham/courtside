@@ -53,7 +53,7 @@ function App() {
         <>
           <header className="app-header">
             <div className="header-top">
-              <h1>Courtside</h1>
+              <h1>Courtside Help</h1>
               <span className="country-chip" aria-label="Australia guide">
                 {selectedCountry.flag} Australia
               </span>

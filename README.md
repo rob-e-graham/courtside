@@ -1,14 +1,42 @@
-# Courtside
+# Courtside Help
 
-Courtside is a mobile-first Australian family court information and support guide.
+Courtside Help is a mobile-first Australian family court information and support guide for people who are separating, have been served, are trying to understand parenting arrangements, or need a calm next step during a stressful legal process.
 
-It provides general information only. It is not legal advice, a crisis service, or a substitute for advice from a qualified Australian family lawyer.
+It is designed to reduce confusion, not replace professional advice. The app gives plain-language general information, Australian support contacts, crisis links, youth support, legal terminology, and lived-experience style navigation for common moments in the family court journey.
 
-## Demo
+**Live demo:** https://rob-e-graham.github.io/courtside/
 
-The shareable demo is deployed with GitHub Actions and GitHub Pages:
+## Screenshots
 
-https://rob-e-graham.github.io/courtside/
+<p>
+  <img src="docs/screenshots/home.jpg" alt="Courtside Help home screen showing Australian family court guide stages" width="30%" />
+  <img src="docs/screenshots/stage-rights.jpg" alt="Understanding Your Rights screen with Australian family law information" width="30%" />
+  <img src="docs/screenshots/get-help.jpg" alt="Get Help screen with Australian crisis, mental health and legal support services" width="30%" />
+</p>
+
+## What It Includes
+
+- Australia-only launch experience with no country picker.
+- Crisis banner with immediate Australian crisis support.
+- Stage-based navigation for common family court moments.
+- Plain-language Australian parenting-law information.
+- Get Help directory for crisis, mental health, family violence and legal support.
+- Legal terms glossary for common court language.
+- Youth support page for children and teenagers affected by separation.
+- Disclaimer and safety language throughout the app.
+
+## Current Scope
+
+The current release is intentionally focused on Australia. Country selection has been removed so people in stressful situations are not asked to make an unnecessary jurisdiction choice.
+
+The guide is general information only. It is not legal advice, a crisis service, counselling, or a substitute for advice from a qualified Australian family lawyer.
+
+## Tech Stack
+
+- React
+- Vite
+- GitHub Pages
+- GitHub Actions deployment
 
 ## Local Development
 
@@ -24,6 +52,22 @@ npm run lint
 npm run build
 ```
 
-## Current Scope
+## Deployment
 
-The current release is intentionally focused on Australia only. Country selection has been removed so people in stressful situations are not asked to make an unnecessary jurisdiction choice.
+The demo is deployed with GitHub Actions and GitHub Pages. The workflow is defined in:
+
+```text
+.github/workflows/deploy.yml
+```
+
+On push, the workflow installs dependencies, runs lint, builds the Vite app, uploads the `dist` artifact, and deploys it to GitHub Pages.
+
+## Content Safety
+
+Courtside Help should stay cautious, non-directive and non-advisory. Content should:
+
+- Explain general processes without telling people what to do in their case.
+- Encourage qualified legal advice before decisions.
+- Avoid promising outcomes or timelines.
+- Prefer official Australian sources for legal and support-service facts.
+- Treat crisis and family violence information with particular care.
