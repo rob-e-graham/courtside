@@ -2,13 +2,6 @@ import { useState } from 'react'
 
 export default function DisclaimerScreen({ onAccept }) {
   const [agreed, setAgreed] = useState(false)
-  const [scrolledToBottom, setScrolledToBottom] = useState(false)
-
-  const handleScroll = (e) => {
-    const el = e.target
-    const atBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 30
-    if (atBottom) setScrolledToBottom(true)
-  }
 
   const handleAccept = () => {
     if (agreed) {
@@ -25,7 +18,7 @@ export default function DisclaimerScreen({ onAccept }) {
         <p className="disclaimer-tagline">Your guide through the family court system</p>
       </div>
 
-      <div className="disclaimer-content" onScroll={handleScroll}>
+      <div className="disclaimer-content">
         <h2>Before you continue</h2>
         <p className="disclaimer-intro">
           Please read and accept the following before using Courtside. This protects both you and our community.
@@ -44,8 +37,8 @@ export default function DisclaimerScreen({ onAccept }) {
           </p>
           <p>
             <strong>You should always seek independent legal advice from a qualified family lawyer
-            in your jurisdiction before making decisions about your case.</strong> Laws change frequently
-            and vary by location. What applies in one state or country may not apply in yours.
+            in Australia before making decisions about your case.</strong> Laws change frequently
+            and related processes can vary by state or territory.
           </p>
         </section>
 
@@ -53,8 +46,7 @@ export default function DisclaimerScreen({ onAccept }) {
           <h3>Not a crisis service</h3>
           <p>
             Courtside is not a crisis service, counselling service, or emergency service.
-            If you or someone you know is in immediate danger, call your local emergency
-            number (000 in Australia, 111 in New Zealand, 999 in UK, 911 in US).
+            If you or someone you know is in immediate danger, call 000 in Australia.
           </p>
           <p>
             We provide links to crisis services and helplines, but we are not affiliated with
@@ -101,8 +93,7 @@ export default function DisclaimerScreen({ onAccept }) {
           <h3>Your privacy</h3>
           <p>
             Courtside does not collect personal information, require accounts, or track your
-            activity. Your country selection is stored locally on your device only and is never
-            transmitted to any server.
+            activity.
           </p>
           <p>
             If you use external services linked from this app (helplines, legal services,

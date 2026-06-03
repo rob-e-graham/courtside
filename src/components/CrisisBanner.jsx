@@ -1,4 +1,4 @@
-export default function CrisisBanner({ country, services }) {
+export default function CrisisBanner({ services }) {
   // Find a crisis number for this country
   const crisisService = services?.crisis?.[0]
 
@@ -7,7 +7,7 @@ export default function CrisisBanner({ country, services }) {
       <div className="crisis-banner">
         <span>In crisis?</span>
         <a href="https://www.iasp.info/resources/Crisis_Centres/" target="_blank" rel="noopener noreferrer" className="crisis-link">
-          Find help in your country
+          Find Australian crisis support
         </a>
       </div>
     )

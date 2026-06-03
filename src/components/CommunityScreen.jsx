@@ -36,12 +36,12 @@ export default function CommunityScreen({ country, onBack }) {
     {
       name: 'local-' + (country?.code?.toLowerCase() || 'general'),
       icon: country?.flag || '🌍',
-      description: `Connect with people in ${country?.name || 'your country'} going through the same system`
+      description: `Connect with people in ${country?.name || 'Australia'} going through the same system`
     },
     {
       name: 'contribute-guides',
       icon: '✍️',
-      description: 'Help us build legal guides for your country'
+      description: 'Help improve the Australian family court guide'
     }
   ]
 
@@ -94,7 +94,7 @@ export default function CommunityScreen({ country, onBack }) {
 
       <div className="contribute-section">
         <h3>Help Build Local Guides</h3>
-        <p>Been through the family court system in your country? Your experience can help others. Join the <strong>#contribute-guides</strong> channel to help us build accurate, verified legal information for your jurisdiction.</p>
+        <p>Been through the Australian family court system? Your experience can help others. Join the <strong>#contribute-guides</strong> channel to help us improve accurate, verified legal information for Australia.</p>
         <p className="contribute-note">All contributed content is reviewed before publishing. We work with legal professionals to verify accuracy.</p>
       </div>
     </div>

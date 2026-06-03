@@ -1,16 +1,29 @@
-# React + Vite
+# Courtside
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Courtside is a mobile-first Australian family court information and support guide.
 
-Currently, two official plugins are available:
+It provides general information only. It is not legal advice, a crisis service, or a substitute for advice from a qualified Australian family lawyer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Demo
 
-## React Compiler
+The shareable demo is published from the `gh-pages` branch:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://rob-e-graham.github.io/courtside/
 
-## Expanding the ESLint configuration
+## Local Development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Checks
+
+```bash
+npm run lint
+npm run build
+```
+
+## Current Scope
+
+The current release is intentionally focused on Australia only. Country selection has been removed so people in stressful situations are not asked to make an unnecessary jurisdiction choice.

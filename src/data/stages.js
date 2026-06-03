@@ -262,6 +262,148 @@ export const stages = [
   }
 ];
 
+export const australianStages = stages.map((stage) => {
+  const info = stage.info
+    .filter((item) => item.heading !== 'New Zealand — additional requirements')
+    .map((item) => {
+      if (stage.id === 'just-served' && item.heading === 'Free and low-cost legal help exists') {
+        return {
+          ...item,
+          text: 'In Australia, free or subsidised legal help may be available through Legal Aid, Community Legal Centres, or pro bono services. These services can help people understand their rights and options without the cost of private representation. See the "Get Help" section for Australian services.'
+        }
+      }
+
+      if (stage.id === 'your-rights' && item.heading === 'Gender and the law') {
+        return {
+          ...item,
+          text: 'Australian family law is gender neutral. It focuses on children\'s best interests, safety, needs, and each parent\'s responsibilities rather than parental rights. There is no automatic entitlement to equal time. Equal time can happen if parents agree or if a court decides it is in the child\'s best interests.'
+        }
+      }
+
+      if (stage.id === 'your-rights' && item.heading === 'Best interests of the child') {
+        return {
+          ...item,
+          text: 'In Australia, the child\'s best interests are the paramount consideration when a court makes parenting orders. Current best-interests factors include safety of the child and caregivers, the child\'s views, developmental, psychological, emotional and cultural needs, each caregiver\'s capacity to meet those needs, the benefit of relationships with parents and significant people where safe, Aboriginal and Torres Strait Islander cultural rights where relevant, and anything else relevant to the child\'s circumstances.'
+        }
+      }
+
+      if (stage.id === 'your-rights' && item.heading === 'Parental responsibility and guardianship') {
+        return {
+          ...item,
+          heading: 'Parental responsibility',
+          text: 'In Australia, parental responsibility means the duties, powers, responsibilities and authority parents have for children. Major long-term issues include education, religious and cultural upbringing, health, name, and significant changes to living arrangements. Since 6 May 2024, the presumption of equal shared parental responsibility no longer exists. A court can order joint or sole decision-making depending on what is best for the child.'
+        }
+      }
+
+      if (stage.id === 'your-rights' && item.heading === 'What courts generally consider') {
+        return {
+          ...item,
+          text: 'While every case is different, Australian courts commonly consider factors such as: each parent\'s ability to provide a safe environment, their capacity to meet the child\'s needs, their willingness to support the child\'s relationship with the other parent, and the stability of proposed arrangements. A family lawyer can explain the factors relevant to your situation.'
+        }
+      }
+
+      if (stage.id === 'your-rights' && item.heading === 'Differences between countries') {
+        return {
+          ...item,
+          heading: 'Australian family law',
+          text: 'The Family Law Act 1975 is the main Australian law for parenting arrangements after separation. In Western Australia, a different law can apply to children\'s matters where the parents were never married. Child protection and family violence protection orders are mainly handled by state and territory systems. Always check what applies where you live and seek advice before acting.'
+        }
+      }
+
+      if (stage.id === 'mediation' && item.heading === 'Dispute resolution is often required') {
+        return {
+          ...item,
+          text: 'In Australia, parents are generally required to attempt Family Dispute Resolution (FDR) before applying to court for parenting orders. Exemptions may apply in cases involving family violence, urgency, child safety concerns, or where one party is unable or unwilling to participate. A family lawyer can advise whether this applies to your situation.'
+        }
+      }
+
+      if (stage.id === 'mediation' && item.heading === 'Agreements can become court orders') {
+        return {
+          ...item,
+          text: 'If parents reach agreement through mediation, they can apply to have it formalised as Consent Orders, making the arrangement legally enforceable. Research suggests that agreements reached by parents tend to have better long-term outcomes than court-imposed orders.'
+        }
+      }
+
+      if (stage.id === 'court' && item.heading === 'Representation for children') {
+        return {
+          ...item,
+          text: 'In contested Australian parenting cases, the court may appoint an Independent Children\'s Lawyer (ICL) to represent the child\'s best interests. The ICL acts independently of both parents and may help the court understand the child\'s views and circumstances.'
+        }
+      }
+
+      if (stage.id === 'court' && item.heading === 'Timeframes') {
+        return {
+          ...item,
+          text: 'Australian family court proceedings can take a significant amount of time to resolve — often 12 to 24 months or longer, depending on the court, location, and complexity. During this time, interim (temporary) orders may be made to establish arrangements while the case progresses.'
+        }
+      }
+
+      if (stage.id === 'protection-orders' && item.heading === 'What protection orders are') {
+        return {
+          ...item,
+          text: 'Protection orders have different names across Australia — IVO in Victoria, AVO in New South Wales, DVO in Queensland, and Family Violence Order in Tasmania, for example. They are court orders that restrict contact and behaviour to protect a person from harm. Breaching a protection order is a criminal offence.'
+        }
+      }
+
+      if (stage.id === 'protection-orders' && item.heading === 'Protection orders and parenting') {
+        return {
+          ...item,
+          text: 'A protection order does not automatically end parenting rights or responsibilities. However, Australian family courts must consider safety when making parenting arrangements. Contact with children may continue but might be supervised or structured. The interaction between protection orders and parenting orders can be complex — legal advice is strongly recommended.'
+        }
+      }
+
+      if (stage.id === 'changing-orders' && item.heading === 'Recovery orders') {
+        return {
+          ...item,
+          text: 'In Australia, if a child has been taken or retained in breach of parenting orders, a Recovery Order can be applied for. This is a serious legal remedy that may involve law enforcement. Legal advice should be sought promptly in these situations.'
+        }
+      }
+
+      if (stage.id === 'changing-orders' && item.heading === 'Orders can be varied') {
+        return {
+          ...item,
+          text: 'Parenting orders are not necessarily permanent. In Australia, orders can be varied (changed) when there has been a significant change in circumstances. Examples may include relocation, changes in children\'s needs as they grow, changes in work schedules, or safety concerns. A family lawyer can advise whether your circumstances may warrant an application to vary orders.'
+        }
+      }
+
+      if (stage.id === 'changing-orders' && item.heading === 'If orders are not being followed') {
+        return {
+          ...item,
+          text: 'If the other parent is not following court orders, legal professionals generally recommend: documenting each breach factually, attempting to resolve the issue through communication or dispute resolution where appropriate, and if necessary, applying to the court for enforcement. Australian courts can impose various remedies depending on the circumstances.'
+        }
+      }
+
+      return item
+    })
+
+  const keyPoints = stage.keyPoints?.map((point) => {
+    if (point === 'Family law in most modern legal systems does not favour one parent based on gender') {
+      return 'Australian family law does not favour one parent based on gender'
+    }
+    if (point === 'The child\'s best interests are the paramount consideration in most jurisdictions') {
+      return 'The child\'s best interests are the paramount consideration in Australian parenting cases'
+    }
+    if (point === 'Laws vary significantly between countries, states, and provinces') {
+      return 'Australian family law is federal, but related protection-order processes vary by state and territory'
+    }
+    if (point === 'Mediation or dispute resolution is required before court in many jurisdictions') {
+      return 'Family Dispute Resolution is generally required before applying for parenting orders in Australia'
+    }
+    if (point === 'Free legal help is available in many jurisdictions — see "Get Help"') {
+      return 'Free legal help is available in Australia — see "Get Help"'
+    }
+    if (point === 'A family lawyer in your jurisdiction can explain how the law applies to your specific situation') {
+      return 'An Australian family lawyer can explain how the law applies to your specific situation'
+    }
+    if (point === 'Protection orders have different names in different jurisdictions but serve similar purposes') {
+      return 'Protection orders have different names across Australian states and territories but serve similar purposes'
+    }
+    return point
+  })
+
+  return { ...stage, info, keyPoints }
+})
+
 export const legalTerms = [
   { term: 'Affidavit', definition: 'A written statement confirmed by oath or affirmation, used as evidence in court proceedings. Affidavits should be factual, chronological, and supported by documentary evidence.' },
   { term: 'Annexure / Exhibit', definition: 'Documents attached to an affidavit as evidence — such as screenshots, reports, or records. Each is typically labelled (e.g., Annexure A, B, C) and referenced in the affidavit.' },
@@ -290,3 +432,29 @@ export const legalTerms = [
   { term: 'Best Interests of the Child', definition: 'The paramount (most important) consideration in all parenting cases across most jurisdictions. In Australia this is set out in Section 60CC of the Family Law Act.' },
   { term: 'Self-Represented Litigant', definition: 'A person who represents themselves in court without a lawyer. Also called a "litigant in person." Courts generally provide some procedural assistance but the same rules apply.' }
 ];
+
+const australiaOnlyTerms = new Set([
+  'Guardianship (NZ)',
+  'Day-to-Day Care / Contact (NZ)',
+  'Lawyer for Child (NZ)'
+]);
+
+export const australianLegalTerms = legalTerms
+  .filter((item) => !australiaOnlyTerms.has(item.term))
+  .map((item) => {
+    if (item.term === 'Protection Order') {
+      return {
+        ...item,
+        definition: 'A court order restricting contact and behaviour to protect a person from harm. Called IVO in Victoria, AVO in New South Wales, DVO in Queensland, Family Violence Order in Tasmania, and other names across Australia. Breach is a criminal offence.'
+      }
+    }
+
+    if (item.term === 'Best Interests of the Child') {
+      return {
+        ...item,
+        definition: 'The paramount consideration in Australian parenting cases. In Australia this is set out in Section 60CC of the Family Law Act.'
+      }
+    }
+
+    return item
+  });
