@@ -2,13 +2,6 @@ import { useState } from 'react'
 
 export default function DisclaimerScreen({ onAccept }) {
   const [agreed, setAgreed] = useState(false)
-  const [scrolledToBottom, setScrolledToBottom] = useState(false)
-
-  const handleScroll = (e) => {
-    const el = e.target
-    const atBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 30
-    if (atBottom) setScrolledToBottom(true)
-  }
 
   const handleAccept = () => {
     if (agreed) {
@@ -21,20 +14,20 @@ export default function DisclaimerScreen({ onAccept }) {
   return (
     <div className="disclaimer-screen">
       <div className="disclaimer-header">
-        <h1>Courtside</h1>
+        <h1>Courtside Help</h1>
         <p className="disclaimer-tagline">Your guide through the family court system</p>
       </div>
 
-      <div className="disclaimer-content" onScroll={handleScroll}>
+      <div className="disclaimer-content">
         <h2>Before you continue</h2>
         <p className="disclaimer-intro">
-          Please read and accept the following before using Courtside. This protects both you and our community.
+          Please read and accept the following before using Courtside Help. This protects both you and our community.
         </p>
 
         <section className="disclaimer-section">
           <h3>This is information, not legal advice</h3>
           <p>
-            Courtside provides <strong>general legal information and educational resources</strong> about
+            Courtside Help provides <strong>general legal information and educational resources</strong> about
             family court systems. It does not provide legal advice, professional recommendations,
             or guidance tailored to your specific circumstances.
           </p>
@@ -44,17 +37,16 @@ export default function DisclaimerScreen({ onAccept }) {
           </p>
           <p>
             <strong>You should always seek independent legal advice from a qualified family lawyer
-            in your jurisdiction before making decisions about your case.</strong> Laws change frequently
-            and vary by location. What applies in one state or country may not apply in yours.
+            in Australia before making decisions about your case.</strong> Laws change frequently
+            and related processes can vary by state or territory.
           </p>
         </section>
 
         <section className="disclaimer-section">
           <h3>Not a crisis service</h3>
           <p>
-            Courtside is not a crisis service, counselling service, or emergency service.
-            If you or someone you know is in immediate danger, call your local emergency
-            number (000 in Australia, 111 in New Zealand, 999 in UK, 911 in US).
+            Courtside Help is not a crisis service, counselling service, or emergency service.
+            If you or someone you know is in immediate danger, call 000 in Australia.
           </p>
           <p>
             We provide links to crisis services and helplines, but we are not affiliated with
@@ -75,7 +67,7 @@ export default function DisclaimerScreen({ onAccept }) {
 
         <section className="disclaimer-section">
           <h3>Community conduct</h3>
-          <p>By using the Courtside community features, you agree to:</p>
+          <p>By using the Courtside Help community features, you agree to:</p>
           <ul>
             <li><strong>Be respectful</strong> — Everyone here is going through something difficult. Treat others with empathy and kindness.</li>
             <li><strong>No legal advice</strong> — Share your experiences, not opinions on someone else's legal case. You are not their lawyer.</li>
@@ -100,9 +92,8 @@ export default function DisclaimerScreen({ onAccept }) {
         <section className="disclaimer-section">
           <h3>Your privacy</h3>
           <p>
-            Courtside does not collect personal information, require accounts, or track your
-            activity. Your country selection is stored locally on your device only and is never
-            transmitted to any server.
+            Courtside Help does not collect personal information, require accounts, or track your
+            activity.
           </p>
           <p>
             If you use external services linked from this app (helplines, legal services,
@@ -113,7 +104,7 @@ export default function DisclaimerScreen({ onAccept }) {
         <section className="disclaimer-section">
           <h3>Limitation of liability</h3>
           <p>
-            To the maximum extent permitted by law, Courtside and its contributors accept no
+            To the maximum extent permitted by law, Courtside Help and its contributors accept no
             liability for any loss, damage, or consequence arising from the use of, or reliance
             on, any information provided through this app. This includes but is not limited to
             any legal, financial, emotional, or other outcomes.

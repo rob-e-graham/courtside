@@ -1,4 +1,4 @@
-export default function SupportScreen({ services, country, globalCrisis, onBack }) {
+export default function SupportScreen({ services, country, onBack }) {
   const hasServices = services && (services.crisis?.length || services.mental?.length || services.legal?.length)
 
   return (
@@ -65,23 +65,6 @@ export default function SupportScreen({ services, country, globalCrisis, onBack 
           <p>In the meantime, these international resources can help:</p>
         </div>
       )}
-
-      <section className="service-section">
-        <h3 className="section-label">International Resources</h3>
-        {globalCrisis.map((s, i) => (
-          <div key={i} className="service-card">
-            <div className="service-info">
-              <span className="service-name">{s.name}</span>
-              <span className="service-desc">{s.description}</span>
-            </div>
-            <div className="service-actions">
-              <a href={s.website} target="_blank" rel="noopener noreferrer" className="web-btn">
-                Visit Website
-              </a>
-            </div>
-          </div>
-        ))}
-      </section>
     </div>
   )
 }

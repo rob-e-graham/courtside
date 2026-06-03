@@ -1,4 +1,4 @@
-export default function StageDetail({ stage, country, onBack, onGetHelp }) {
+export default function StageDetail({ stage, onBack, onGetHelp }) {
   return (
     <div className="stage-detail">
       <button className="back-btn" onClick={onBack}>
@@ -32,7 +32,7 @@ export default function StageDetail({ stage, country, onBack, onGetHelp }) {
       )}
 
       <div className="stage-disclaimer">
-        <p>This is general information only and may not apply to your specific situation or jurisdiction. Laws and processes vary by location and change over time. <strong>Please seek professional legal advice before acting on any of this information.</strong></p>
+        <p>This is general Australian information only and may not apply to your specific situation. Laws and processes change over time, and some related processes vary by state or territory. <strong>Please seek professional legal advice before acting on any of this information.</strong></p>
       </div>
 
       <button className="help-btn" onClick={onGetHelp}>

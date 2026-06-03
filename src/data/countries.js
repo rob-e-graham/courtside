@@ -1,20 +1,22 @@
+export const australia = {
+  code: 'AU',
+  name: 'Australia',
+  flag: '\u{1F1E6}\u{1F1FA}',
+  hasFullGuide: true,
+  regions: [
+    { code: 'NSW', name: 'New South Wales' },
+    { code: 'VIC', name: 'Victoria' },
+    { code: 'QLD', name: 'Queensland' },
+    { code: 'WA', name: 'Western Australia' },
+    { code: 'SA', name: 'South Australia' },
+    { code: 'TAS', name: 'Tasmania' },
+    { code: 'ACT', name: 'Australian Capital Territory' },
+    { code: 'NT', name: 'Northern Territory' }
+  ]
+};
+
 export const countries = [
-  {
-    code: 'AU',
-    name: 'Australia',
-    flag: '\u{1F1E6}\u{1F1FA}',
-    hasFullGuide: true,
-    regions: [
-      { code: 'NSW', name: 'New South Wales' },
-      { code: 'VIC', name: 'Victoria' },
-      { code: 'QLD', name: 'Queensland' },
-      { code: 'WA', name: 'Western Australia' },
-      { code: 'SA', name: 'South Australia' },
-      { code: 'TAS', name: 'Tasmania' },
-      { code: 'ACT', name: 'Australian Capital Territory' },
-      { code: 'NT', name: 'Northern Territory' }
-    ]
-  },
+  australia,
   {
     code: 'NZ',
     name: 'New Zealand',
@@ -123,18 +125,19 @@ export const globalCrisis = [
 export const countryServices = {
   AU: {
     crisis: [
-      { name: 'Lifeline', phone: '13 11 14', available: '24/7', description: 'Crisis support and suicide prevention' },
+      { name: 'Lifeline', phone: '13 11 14', available: '24/7', description: 'Crisis support and suicide prevention', website: 'https://lifeline.org.au' },
+      { name: '13YARN', phone: '13 92 76', available: '24/7', description: 'Crisis support with Aboriginal and Torres Strait Islander Crisis Supporters', website: 'https://13yarn.org.au' },
     ],
     mental: [
-      { name: 'MensLine Australia', phone: '1300 78 99 78', available: '24/7', description: 'Support for men with family and relationship concerns', website: 'https://mensline.org.au' },
-      { name: 'Beyond Blue', phone: '1300 22 4636', available: '24/7', description: 'Anxiety, depression and suicide prevention', website: 'https://beyondblue.org.au' },
-      { name: '1800RESPECT', phone: '1800 737 732', available: '24/7', description: 'Support for people experiencing family violence', website: 'https://1800respect.org.au' },
-      { name: 'Suicide Call Back Service', phone: '1300 659 467', available: '24/7', description: 'Professional phone and online counselling' },
+      { name: 'MensLine Australia', phone: '1300 78 99 78', available: '24/7', description: 'Phone and online counselling for men with emotional health and relationship concerns', website: 'https://mensline.org.au' },
+      { name: 'Beyond Blue', phone: '1300 22 4636', available: '24/7', description: 'Brief mental health counselling and referral support', website: 'https://beyondblue.org.au' },
+      { name: '1800RESPECT', phone: '1800 737 732', available: '24/7', description: 'Domestic, family and sexual violence counselling, information and support', website: 'https://1800respect.org.au' },
+      { name: 'Suicide Call Back Service', phone: '1300 659 467', available: '24/7', description: 'Professional phone and online counselling for anyone affected by suicide', website: 'https://suicidecallbackservice.org.au' },
     ],
     legal: [
       { name: 'Family Relationship Advice Line', phone: '1800 050 321', available: 'Mon-Fri 8am-8pm, Sat 10am-4pm', description: 'Information about family law and services', website: 'https://familyrelationships.gov.au' },
-      { name: 'National Legal Aid', phone: '1300 650 143', available: 'Business hours', description: 'Free legal help if you qualify' },
-      { name: 'Men\'s Referral Service', phone: '1300 766 491', available: 'Business hours', description: 'Referrals and support for men' },
+      { name: 'Legal Aid in your state or territory', available: 'Business hours', description: 'Free legal information and advice. Use the region list below for the right intake line.', website: 'https://nationallegalaid.org.au/find-legal-help' },
+      { name: 'Men\'s Referral Service', phone: '1300 766 491', available: '24/7', description: 'Counselling, information and referrals for men using violence or abuse who want to change', website: 'https://mrs.org.au' },
     ],
     legalByRegion: [
       { region: 'NSW', phone: '1300 888 529', website: 'https://legalaid.nsw.gov.au' },

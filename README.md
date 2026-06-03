@@ -1,16 +1,73 @@
-# React + Vite
+# Courtside Help
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Courtside Help is a mobile-first Australian family court information and support guide for people who are separating, have been served, are trying to understand parenting arrangements, or need a calm next step during a stressful legal process.
 
-Currently, two official plugins are available:
+It is designed to reduce confusion, not replace professional advice. The app gives plain-language general information, Australian support contacts, crisis links, youth support, legal terminology, and lived-experience style navigation for common moments in the family court journey.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Live demo:** https://rob-e-graham.github.io/courtside/
 
-## React Compiler
+## Screenshots
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<p>
+  <img src="docs/screenshots/home.jpg" alt="Courtside Help home screen showing Australian family court guide stages" width="30%" />
+  <img src="docs/screenshots/stage-rights.jpg" alt="Understanding Your Rights screen with Australian family law information" width="30%" />
+  <img src="docs/screenshots/get-help.jpg" alt="Get Help screen with Australian crisis, mental health and legal support services" width="30%" />
+</p>
 
-## Expanding the ESLint configuration
+## What It Includes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Australia-only launch experience with no country picker.
+- Crisis banner with immediate Australian crisis support.
+- Stage-based navigation for common family court moments.
+- Plain-language Australian parenting-law information.
+- Get Help directory for crisis, mental health, family violence and legal support.
+- Legal terms glossary for common court language.
+- Youth support page for children and teenagers affected by separation.
+- Disclaimer and safety language throughout the app.
+
+## Current Scope
+
+The current release is intentionally focused on Australia. Country selection has been removed so people in stressful situations are not asked to make an unnecessary jurisdiction choice.
+
+The guide is general information only. It is not legal advice, a crisis service, counselling, or a substitute for advice from a qualified Australian family lawyer.
+
+## Tech Stack
+
+- React
+- Vite
+- GitHub Pages
+- GitHub Actions deployment
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Checks
+
+```bash
+npm run lint
+npm run build
+```
+
+## Deployment
+
+The demo is deployed with GitHub Actions and GitHub Pages. The workflow is defined in:
+
+```text
+.github/workflows/deploy.yml
+```
+
+On push, the workflow installs dependencies, runs lint, builds the Vite app, uploads the `dist` artifact, and deploys it to GitHub Pages.
+
+## Content Safety
+
+Courtside Help should stay cautious, non-directive and non-advisory. Content should:
+
+- Explain general processes without telling people what to do in their case.
+- Encourage qualified legal advice before decisions.
+- Avoid promising outcomes or timelines.
+- Prefer official Australian sources for legal and support-service facts.
+- Treat crisis and family violence information with particular care.

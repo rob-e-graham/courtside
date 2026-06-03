@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react'
-import { stages, legalTerms } from './data/stages'
-import { countries, countryServices, globalCrisis } from './data/countries'
+import { useState } from 'react'
+import { australianStages, australianLegalTerms } from './data/stages'
+import { australia, countryServices } from './data/countries'
 import DisclaimerScreen from './components/DisclaimerScreen'
 import CrisisBanner from './components/CrisisBanner'
-import CountrySelector from './components/CountrySelector'
 import StageSelector from './components/StageSelector'
 import StageDetail from './components/StageDetail'
 import SupportScreen from './components/SupportScreen'
@@ -13,32 +12,13 @@ import YouthScreen from './components/YouthScreen'
 import './App.css'
 
 function App() {
-  const [hasAccepted, setHasAccepted] = useState(false)
+  const [hasAccepted, setHasAccepted] = useState(() => localStorage.getItem('courtside_accepted') === 'true')
   const [screen, setScreen] = useState('home')
   const [selectedStage, setSelectedStage] = useState(null)
-  const [selectedCountry, setSelectedCountry] = useState(null)
-  const [showCountryPicker, setShowCountryPicker] = useState(false)
-
-  // Check for saved state on mount
-  useEffect(() => {
-    const accepted = localStorage.getItem('courtside_accepted')
-    if (accepted === 'true') setHasAccepted(true)
-
-    const savedCountry = localStorage.getItem('courtside_country')
-    if (savedCountry) {
-      const found = countries.find(c => c.code === savedCountry)
-      if (found) setSelectedCountry(found)
-    }
-  }, [])
+  const selectedCountry = australia
 
   const handleAcceptDisclaimer = () => {
     setHasAccepted(true)
-  }
-
-  const handleCountrySelect = (country) => {
-    setSelectedCountry(country)
-    localStorage.setItem('courtside_country', country.code)
-    setShowCountryPicker(false)
   }
 
   const handleStageSelect = (stage) => {
@@ -58,78 +38,39 @@ function App() {
     window.scrollTo(0, 0)
   }
 
-  const services = selectedCountry ? countryServices[selectedCountry.code] : null
+  const services = countryServices[selectedCountry.code]
 
   // Step 1: Disclaimer agreement
   if (!hasAccepted) {
     return <DisclaimerScreen onAccept={handleAcceptDisclaimer} />
   }
 
-  // Step 2: Country selection
-  if (!selectedCountry) {
-    return (
-      <div className="app">
-        <div className="onboarding">
-          <h1>Courtside</h1>
-          <p className="onboarding-sub">Free family court information &amp; support</p>
-          <p className="onboarding-desc">General legal information, support services, and a community of people who understand what you're going through. Not legal advice.</p>
-          <h2 className="onboarding-prompt">Where are you located?</h2>
-          <CountrySelector
-            countries={countries}
-            onSelect={handleCountrySelect}
-          />
-          <p className="onboarding-note">This helps us show you relevant information and support services in your area. Your selection is stored on your device only.</p>
-        </div>
-      </div>
-    )
-  }
-
-  // Step 3: Main app
   return (
     <div className="app">
-      <CrisisBanner country={selectedCountry} services={services} />
+      <CrisisBanner services={services} />
 
       {screen === 'home' && (
         <>
           <header className="app-header">
             <div className="header-top">
-              <h1>Courtside</h1>
-              <button
-                className="country-chip"
-                onClick={() => setShowCountryPicker(!showCountryPicker)}
-              >
-                {selectedCountry.flag} {selectedCountry.code}
-              </button>
+              <h1>Courtside Help</h1>
+              <span className="country-chip" aria-label="Australia guide">
+                {selectedCountry.flag} Australia
+              </span>
             </div>
-            <p className="app-subtitle">Free family court information &amp; support</p>
-
-            {showCountryPicker && (
-              <div className="country-dropdown">
-                <CountrySelector
-                  countries={countries}
-                  onSelect={handleCountrySelect}
-                  compact
-                />
-              </div>
-            )}
+            <p className="app-subtitle">Free Australian family court information &amp; support</p>
           </header>
 
           <div className="info-badge-bar">
             <span className="info-badge">ℹ️ Information resource — not legal advice</span>
           </div>
 
-          {!selectedCountry.hasFullGuide && (
-            <div className="community-notice">
-              <p><strong>Guide in progress</strong> — We're building the legal information guide for {selectedCountry.name}. The stages below contain general information that applies in most countries. Community members can help us add local details.</p>
-            </div>
-          )}
-
           <section className="stage-prompt">
             <h2>Where are you at?</h2>
             <p>Tap your situation for general information</p>
           </section>
 
-          <StageSelector stages={stages} onSelect={handleStageSelect} />
+          <StageSelector stages={australianStages} onSelect={handleStageSelect} />
 
           <button
             className="youth-card"
@@ -160,7 +101,7 @@ function App() {
 
           <footer className="app-footer">
             <div className="footer-disclaimer">
-              <p><strong>Important:</strong> This app provides general information only, not legal advice. Every situation is unique. Always seek advice from a qualified family lawyer in your jurisdiction before making decisions about your case.</p>
+              <p><strong>Important:</strong> This app provides general Australian information only, not legal advice. Every situation is unique. Always seek advice from a qualified Australian family lawyer before making decisions about your case.</p>
             </div>
             <p className="footer-credit">Built by people who've been through it.</p>
             <button className="footer-link" onClick={() => {
@@ -176,24 +117,22 @@ function App() {
       {screen === 'stage' && selectedStage && (
         <StageDetail
           stage={selectedStage}
-          country={selectedCountry}
           onBack={handleBack}
           onGetHelp={() => handleNav('support')}
         />
       )}
 
       {screen === 'support' && (
-        <SupportScreen
-          services={services}
-          country={selectedCountry}
-          globalCrisis={globalCrisis}
-          onBack={handleBack}
-        />
+          <SupportScreen
+            services={services}
+            country={selectedCountry}
+            onBack={handleBack}
+          />
       )}
 
       {screen === 'glossary' && (
         <GlossaryScreen
-          terms={legalTerms}
+          terms={australianLegalTerms}
           onBack={handleBack}
         />
       )}
