@@ -6,7 +6,7 @@ It provides general information only. It is not legal advice, a crisis service, 
 
 ## Demo
 
-The shareable demo is published from the `gh-pages` branch:
+The shareable demo is deployed with GitHub Actions and GitHub Pages:
 
 https://rob-e-graham.github.io/courtside/
 
