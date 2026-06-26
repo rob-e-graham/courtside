@@ -1,8 +1,8 @@
 # Courtside Help
 
-Courtside Help is a mobile-first Australian family court information and support guide for people who are separating, have been served, are trying to understand parenting arrangements, or need a calm next step during a stressful legal process.
+Courtside Help is a mobile-first Australian family violence and family court information guide for applicants, respondents, people who have been served, people seeking protection, and families trying to understand parenting arrangements or urgent next steps.
 
-It is designed to reduce confusion, not replace professional advice. The app gives plain-language general information, Australian support contacts, crisis links, youth support, legal terminology, and lived-experience style navigation for common moments in the family court journey.
+It is designed to reduce confusion, not replace professional advice. The app gives plain-language general information, Australian support contacts, crisis links, youth support, legal terminology, and lived-experience style navigation for common moments involving family violence orders, family court, separation, safety concerns, and parenting disputes.
 
 **Live demo:** https://fineartmedia.tech/courtside/
 
@@ -18,7 +18,7 @@ It is designed to reduce confusion, not replace professional advice. The app giv
 
 - Australia-only launch experience with no country picker.
 - Crisis banner with immediate Australian crisis support.
-- Stage-based navigation for common family court moments.
+- Stage-based navigation for common family violence and family court moments.
 - Plain-language Australian parenting-law information.
 - Get Help directory for crisis, mental health, family violence and legal support.
 - Legal terms glossary for common court language.

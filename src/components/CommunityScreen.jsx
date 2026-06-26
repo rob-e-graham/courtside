@@ -41,7 +41,7 @@ export default function CommunityScreen({ country, onBack }) {
     {
       name: 'contribute-guides',
       icon: '✍️',
-      description: 'Help improve the Australian family court guide'
+      description: 'Help improve the Australian family violence and family court guide'
     }
   ]
 
@@ -94,7 +94,7 @@ export default function CommunityScreen({ country, onBack }) {
 
       <div className="contribute-section">
         <h3>Help Build Local Guides</h3>
-        <p>Been through the Australian family court system? Your experience can help others. Join the <strong>#contribute-guides</strong> channel to help us improve accurate, verified legal information for Australia.</p>
+        <p>Been through Australian family violence or family court systems? Your experience can help others. Join the <strong>#contribute-guides</strong> channel to help us improve accurate, verified legal information for Australia.</p>
         <p className="contribute-note">All contributed content is reviewed before publishing. We work with legal professionals to verify accuracy.</p>
       </div>
     </div>

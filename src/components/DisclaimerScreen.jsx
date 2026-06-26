@@ -15,7 +15,7 @@ export default function DisclaimerScreen({ onAccept }) {
     <div className="disclaimer-screen">
       <div className="disclaimer-header">
         <h1>Courtside Help</h1>
-        <p className="disclaimer-tagline">Your guide through the family court system</p>
+        <p className="disclaimer-tagline">Family violence and family court information for applicants and respondents</p>
       </div>
 
       <div className="disclaimer-content">
@@ -28,7 +28,7 @@ export default function DisclaimerScreen({ onAccept }) {
           <h3>This is information, not legal advice</h3>
           <p>
             Courtside Help provides <strong>general legal information and educational resources</strong> about
-            family court systems. It does not provide legal advice, professional recommendations,
+            family violence and family court systems. It does not provide legal advice, professional recommendations,
             or guidance tailored to your specific circumstances.
           </p>
           <p>

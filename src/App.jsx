@@ -59,7 +59,7 @@ function App() {
                 {selectedCountry.flag} Australia
               </span>
             </div>
-            <p className="app-subtitle">Free Australian family court information &amp; support</p>
+            <p className="app-subtitle">Free Australian family violence &amp; family court information</p>
           </header>
 
           <div className="info-badge-bar">
@@ -89,7 +89,7 @@ function App() {
             <div className="print-pack-copy">
               <span className="print-pack-label">Print &amp; Share</span>
               <h2>Poster, card and sticker downloads</h2>
-              <p>Bold QR resources for courts, police stations, emergency services and support desks.</p>
+              <p>Bold QR resources for applicants, respondents, courts, police stations, emergency services and support desks.</p>
             </div>
             <div className="print-pack-actions">
               <a className="print-link primary" href={`${appBase}downloads/courtside-help-poster.pdf`} download>
@@ -121,7 +121,7 @@ function App() {
 
           <footer className="app-footer">
             <div className="footer-disclaimer">
-              <p><strong>Important:</strong> This app provides general Australian information only, not legal advice. Every situation is unique. Always seek advice from a qualified Australian family lawyer before making decisions about your case.</p>
+              <p><strong>Important:</strong> This app provides general Australian information only, not legal advice. Every situation is unique. Always seek advice from a qualified Australian family lawyer or family violence service before making decisions about your case.</p>
             </div>
             <p className="footer-credit">Built by people who've been through it.</p>
             <button className="footer-link" onClick={() => {
