@@ -1254,6 +1254,68 @@ body {
   line-height: 1.4;
 }
 
+/* ===== PRINT PACK ===== */
+.print-pack {
+  margin: 10px 1rem 0;
+  padding: 14px;
+  background: #f8f5ea;
+  color: #080808;
+  border: 2px solid #ffffff;
+  border-radius: var(--radius);
+}
+
+.print-pack-label {
+  display: inline-block;
+  margin-bottom: 6px;
+  color: #0b5fff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.print-pack h2 {
+  margin-bottom: 4px;
+  font-size: 1rem;
+  line-height: 1.15;
+}
+
+.print-pack p {
+  color: #333333;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.print-pack-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.print-link {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 6px;
+  background: #ffffff;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  color: #080808;
+  font-size: 0.74rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+  text-decoration: none;
+}
+
+.print-link.primary {
+  background: #0b5fff;
+  border-color: #0b5fff;
+  color: #ffffff;
+}
+
 /* ===== YOUTH SCREEN ===== */
 .youth-screen {
   padding-bottom: 2rem;

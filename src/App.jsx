@@ -16,6 +16,7 @@ function App() {
   const [screen, setScreen] = useState('home')
   const [selectedStage, setSelectedStage] = useState(null)
   const selectedCountry = australia
+  const appBase = import.meta.env.BASE_URL
 
   const handleAcceptDisclaimer = () => {
     setHasAccepted(true)
@@ -83,6 +84,25 @@ function App() {
             </div>
             <span className="stage-arrow">&rsaquo;</span>
           </button>
+
+          <section className="print-pack">
+            <div className="print-pack-copy">
+              <span className="print-pack-label">Print &amp; Share</span>
+              <h2>Poster, card and sticker downloads</h2>
+              <p>Bold QR resources for courts, police stations, emergency services and support desks.</p>
+            </div>
+            <div className="print-pack-actions">
+              <a className="print-link primary" href={`${appBase}downloads/courtside-help-poster.pdf`} download>
+                A4 Poster
+              </a>
+              <a className="print-link" href={`${appBase}downloads/courtside-help-card.pdf`} download>
+                Help Card
+              </a>
+              <a className="print-link" href={`${appBase}downloads/courtside-help-sticker.png`} download>
+                Sticker
+              </a>
+            </div>
+          </section>
 
           <nav className="bottom-nav">
             <button className="nav-btn" onClick={() => handleNav('support')}>

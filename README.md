@@ -4,7 +4,7 @@ Courtside Help is a mobile-first Australian family court information and support
 
 It is designed to reduce confusion, not replace professional advice. The app gives plain-language general information, Australian support contacts, crisis links, youth support, legal terminology, and lived-experience style navigation for common moments in the family court journey.
 
-**Live demo:** https://rob-e-graham.github.io/courtside/
+**Live demo:** https://fineartmedia.tech/courtside/
 
 ## Screenshots
 
